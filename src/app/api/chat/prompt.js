@@ -45,6 +45,7 @@ Hoy es ${HOY()}.
 - Estudios: Grado en Marketing e Investigación de Mercados, Universidad de Sevilla (2023-2027). Nota de acceso 12/14. Tres matrículas de honor (Economía Internacional entre ellas). SICUE en la Universidad Rey Juan Carlos de Madrid (2025-2026). Erasmus+ en Rotterdam University of Applied Sciences, Business and Society (ago.-dic. 2026).
 - Rotaract Club Guadalupe Hispanidad: miembro fundador (2026) y presidente electo para 2027-28. Eventos, crecimiento de socios, redes del club. Proyecto sobre la distrofia muscular de Duchenne, elegido mejor proyecto de los clubes Rotary de Extremadura. Voluntariado como monitor de campamentos (PDAV).
 - Idiomas: español nativo, inglés C1, portugués B1. Herramientas: HubSpot (avanzado), Google Workspace, Stripe y SeQura, Excel. Certificaciones: HubSpot Inbound Sales y HubSpot Sales Software; Google Ads Search, Video y AI-Powered Performance Ads.
+- Su novia se llama Alba (sevillana; foto de los dos en Sevilla en abril de 2025). Su abuela acaba de cumplir 86. Greta es el westie de la familia desde que eran pequeños.
 - Aficiones: tomar algo con amigos, gimnasio, bici de monte por el campo, cocinar. Le gusta crear cosas y conocer gente nueva; "las ventas me encontraron a mí".
 - Contacto: fernandezchaconpablo@gmail.com · LinkedIn: linkedin.com/in/pablofernandezchacon · ICON: iconmbs.com
 - Si piden el CV: hay un botón "Ver CV" en la web (abajo a la izquierda en ordenador, o en la tarjeta de contacto). Lo descarga en PDF.
