@@ -16,7 +16,7 @@ const P = (name, w, h, alt) => ({ src: `/media/${name}.webp`, w, h, alt });
 export const intro = [
   { kind: "text", text: "hola 👋" },
   { kind: "text", text: "soy pablo" },
-  { kind: "photos", photos: [P("pablo-retrato", 933, 1400, "Pablo, retrato")] }, // TODO foto
+  { kind: "photos", photos: [P("pablo-retrato", 1050, 1400, "Pablo, retrato")] },
   {
     kind: "text",
     text: "gracias por entrar. esto es un chat conmigo: pregúntame lo que quieras o toca alguna de las sugerencias de abajo",
@@ -59,11 +59,14 @@ export const chapters = [
   {
     id: "ventas",
     chip: "¿Por qué ventas?",
-    row: { title: "Vender", preview: "las ventas me encontraron a mí" },
+    row: { title: "Vender", preview: "las ventas me encontraron a mí", image: "/media/acom-headset.webp" },
     messages: [
       { kind: "text", text: "me gusta hacer cosas y conocer gente. las ventas son básicamente eso, así que creo que me encontraron ellas a mí" },
       { kind: "text", text: "empecé en Spine Consulting, una agencia de marketing para pymes. 90 llamadas en frío al día y campañas de Google Ads para traer leads. conseguimos 32 clínicas nuevas" },
-      { kind: "text", text: "el verano de 2024 estuve en ACOM vendiendo contratos de luz por teléfono. el trabajo más duro que he hecho y el que más me enseñó. en agosto me dieron el premio al mejor vendedor del mes" },
+      { kind: "text", text: "el verano de 2024 estuve en ACOM vendiendo contratos de luz por teléfono. el trabajo más duro que he hecho y el que más me enseñó" },
+      { kind: "photos", photos: [P("acom-headset", 787, 1400, "Pablo con auriculares en el call center de ACOM"), P("acom-oficina", 787, 1400, "Pablo en la oficina de ACOM, en su décimo aniversario")] },
+      { kind: "video", video: { src: "/media/acom-video.mp4", poster: "/media/acom-video-poster.jpg", w: 1024, h: 576 } },
+      { kind: "text", text: "esa cara es la de la llamada número doscientas del día. en agosto me dieron el premio al mejor vendedor del mes, así que algo haría bien" },
       { kind: "text", text: "lo que he aprendido: un buen proceso gana a un buen pitch. y que la gente te compra cuando entiende que la has escuchado" },
     ],
   },
@@ -100,21 +103,23 @@ export const chapters = [
   {
     id: "estudios",
     chip: "¿Qué estudias?",
-    row: { title: "Universidad", preview: "Sevilla, Madrid y ahora Rotterdam" },
+    row: { title: "Universidad", preview: "Sevilla, Madrid y ahora Rotterdam", image: "/media/rotterdam-puente.webp" },
     messages: [
       { kind: "text", text: "Marketing e Investigación de Mercados en la Universidad de Sevilla. tres matrículas de honor por el camino, entre ellas Economía Internacional" },
       { kind: "text", text: "el año pasado hice un SICUE en la Rey Juan Carlos, en Madrid, y este semestre estoy de Erasmus en Rotterdam" },
-      { kind: "photos", photos: [P("rotterdam", 1050, 1400, "Pablo en Rotterdam")] }, // TODO foto
+      { kind: "photos", photos: [P("rotterdam-puente", 787, 1400, "El puente Erasmus de Rotterdam de noche"), P("rotterdam-rdam", 787, 1400, "Rotterdam de noche")] },
       { kind: "text", text: "trabajar en ICON desde Holanda es posible porque el equipo funciona solo. que era la idea" },
+      { kind: "photos", photos: [P("bruselas", 1400, 788, "Pablo frente al Palacio Real de Bruselas")] },
+      { kind: "text", text: "y de paso, los fines de semana, lo que pille a un tren de distancia" },
     ],
   },
   {
     id: "rotaract",
     chip: "¿Y fuera del trabajo?",
-    row: { title: "Rotaract", preview: "un club que montamos en 2026" },
+    row: { title: "Rotaract", preview: "un club que montamos en 2026", image: "/media/rotaract-acto.webp" },
     messages: [
       { kind: "text", text: "en 2026 fundamos con unos amigos el Rotaract Club Guadalupe Hispanidad, el club joven de Rotary. en 2027 me toca ser presidente" },
-      { kind: "photos", photos: [P("rotaract", 1400, 1050, "Rotaract Club Guadalupe Hispanidad")] }, // TODO foto
+      { kind: "photos", photos: [P("rotaract-acto", 1400, 1050, "Acto de constitución del Rotaract Club Guadalupe Hispanidad")] },
       { kind: "text", text: "lo que más orgullo me da es el proyecto sobre la distrofia muscular de Duchenne: lo eligieron mejor proyecto de los clubes Rotary de Extremadura" },
       { kind: "text", text: "también he sido monitor de campamentos con PDAV, cuidando de los pequeños y de que la logística no se cayera" },
     ],
@@ -122,13 +127,14 @@ export const chapters = [
   {
     id: "personal",
     chip: "Cuéntame algo personal",
-    row: { title: "Fuera del trabajo", preview: "amigos, campo y cocina" },
+    row: { title: "Fuera del trabajo", preview: "amigos, campo y cocina", image: "/media/abuela.webp" },
     messages: [
-      { kind: "text", text: "si quieres conocerme tienes que conocer a mi gente" },
-      { kind: "photos", photos: [P("familia", 1400, 1050, "Pablo con su familia"), P("amigos", 1400, 1050, "Pablo con amigos")] }, // TODO fotos
       { kind: "text", text: "lo que más me gusta: tomar algo con amigos, el gimnasio, la bici de monte por el campo y cocinar. en ese orden, más o menos" },
-      { kind: "photos", photos: [P("bici", 1050, 1400, "Bici de monte"), P("cocina", 1050, 1400, "Pablo cocinando")] }, // TODO fotos
-      { kind: "text", text: "y mi hermano Luis, con el que comparto empresa y casi todo lo demás. si quieres conocerlo a él, tiene su propio chat" },
+      { kind: "text", text: "pero si quieres conocerme tienes que conocer a mi gente" },
+      { kind: "photos", photos: [P("abuela", 1050, 1400, "Pablo con su abuela en su 86 cumpleaños"), P("navidad-familia", 1400, 788, "Navidad en familia")] },
+      { kind: "text", text: "mi abuela, que acaba de cumplir 86, y las navidades en casa, que son sagradas" },
+      { kind: "photos", photos: [P("hermanos-greta", 1038, 1400, "Pablo y Luis de pequeños con Greta")] },
+      { kind: "text", text: "y mi hermano Luis, con el que comparto empresa y casi todo lo demás desde que éramos estos dos. si quieres conocerlo a él, tiene su propio chat" },
       {
         kind: "link",
         link: {
@@ -155,7 +161,9 @@ export const chapters = [
 // Mientras no existan las fotos marcadas TODO, se ocultan los mensajes
 // de fotos cuyos archivos no están en public/media (lista mantenida abajo).
 const available = new Set([
-  // "pablo-retrato", "icon-equipo", "rotterdam", "rotaract", "familia", "amigos", "bici", "cocina",
+  "pablo-retrato", "acom-headset", "acom-oficina", "rotterdam-puente", "rotterdam-rdam", "bruselas",
+  "rotaract-acto", "abuela", "navidad-familia", "hermanos-greta",
+  // pendientes: "icon-equipo", "pareja-sevilla"
 ]);
 for (const list of [intro, ...chapters.map((c) => c.messages)]) {
   for (let i = list.length - 1; i >= 0; i--) {
