@@ -131,8 +131,8 @@ export const chapters = [
     messages: [
       { kind: "text", text: "lo que más me gusta: tomar algo con amigos, el gimnasio, la bici de monte por el campo y cocinar. en ese orden, más o menos" },
       { kind: "text", text: "pero si quieres conocerme tienes que conocer a mi gente" },
-      { kind: "photos", photos: [P("abuela", 1050, 1400, "Pablo con su abuela en su 86 cumpleaños"), P("navidad-familia", 1400, 788, "Navidad en familia")] },
-      { kind: "text", text: "mi abuela, que acaba de cumplir 86, y las navidades en casa, que son sagradas" },
+      { kind: "photos", photos: [P("abuela", 1050, 1400, "Pablo con su abuela en su 86 cumpleaños"), P("navidad-familia", 1400, 788, "Navidad en casa: Luis, Alba, mi madre y yo")] },
+      { kind: "text", text: "mi abuela, que acaba de cumplir 86, y la navidad en casa con mi madre, mi hermano y alba. las gafas son obligatorias" },
       { kind: "photos", photos: [P("pareja-sevilla", 1400, 1050, "Pablo y Alba en Sevilla")] },
       { kind: "text", text: "alba. sevilla, abril, y la cámara de alguien que no sabía quitar la fecha" },
       { kind: "photos", photos: [P("hermanos-greta", 1038, 1400, "Pablo y Luis de pequeños con Greta")] },
