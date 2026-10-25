@@ -26,7 +26,7 @@ export const intro = [
   },
   {
     kind: "text",
-    text: "it works like a chat. tap a suggestion below or ask me anything, and i'll tell you why i think i'd be a good fit for the internship",
+    text: "it works like a chat. tap a suggestion below or ask me anything, and i'll tell you why i think i'd be a good fit for the sales and marketing internship",
   },
   {
     kind: "text",
@@ -42,8 +42,8 @@ export const chapters = [
     messages: [
       { kind: "text", text: "the photo at the top: earlier this year i was invited to an event at Google's offices in Dublin, through my work at ICON" },
       { kind: "text", text: "i'd read about the place a hundred times. being inside was different: the way people talked about their work, the pace, how much they cared about the customer on the other end of the call" },
-      { kind: "text", text: "i walked out knowing that this was where i wanted to learn sales properly. so here i am, applying" },
-      { kind: "text", text: "what i bring: a year building a sales team from zero, a process-first way of working, and a lot of energy for picking up the phone. what i want: to learn how it's done at the scale Google does it" },
+      { kind: "text", text: "i walked out knowing that this was where i wanted to learn how sales and marketing are done properly. so here i am, applying" },
+      { kind: "text", text: "what i bring: a year building a sales team from zero, campaigns on Google Ads that actually brought in clients, and a process-first way of working. what i want: to learn how sales and marketing are done at the scale Google does it" },
     ],
   },
   {
@@ -71,16 +71,16 @@ export const chapters = [
   },
   {
     id: "ventas",
-    chip: "Why sales?",
-    row: { title: "Sales", preview: "sales found me first", image: "/media/acom-headset.webp" },
+    chip: "Why sales and marketing?",
+    row: { title: "Sales & marketing", preview: "the two sides of the same job", image: "/media/acom-headset.webp" },
     messages: [
-      { kind: "text", text: "i like building things and meeting people. sales is basically both, so i think it found me before i found it" },
-      { kind: "text", text: "i started at Spine Consulting, a marketing agency for small businesses. 90 cold calls a day plus Google Ads campaigns to bring in leads. we signed 32 new clinics" },
+      { kind: "text", text: "i like building things and meeting people. marketing is the first, sales is the second, and i've never been able to do one without the other" },
+      { kind: "text", text: "i started at Spine Consulting, a marketing agency for small businesses. i ran both ends of the funnel: Google Ads campaigns to bring in leads, and 90 cold calls a day to turn them into clients. we signed 32 new clinics" },
       { kind: "text", text: "summer 2024 i was at ACOM selling electricity contracts over the phone. the hardest job i've had and the one that taught me the most" },
       { kind: "photos", photos: [P("acom-headset", 787, 1400, "Pablo wearing a headset at the ACOM call centre"), P("acom-oficina", 787, 1400, "Pablo at the ACOM office on its 10th anniversary")] },
       { kind: "video", video: { src: "/media/acom-video.mp4", poster: "/media/acom-video-poster.jpg", w: 1024, h: 576 } },
       { kind: "text", text: "that face is call number two hundred of the day. in august they named me top seller of the month, so i must have been doing something right" },
-      { kind: "text", text: "what i've learned: a good process beats a good pitch. and people buy when they feel you actually listened" },
+      { kind: "text", text: "what i've learned: a good process beats a good pitch, the best marketing is knowing exactly who you're talking to, and people buy when they feel you actually listened" },
     ],
   },
   {
@@ -88,7 +88,7 @@ export const chapters = [
     chip: "The podcast",
     row: { title: "Inédito Podcast", preview: "70 episodes, 45,000 subscribers", image: "/media/inedito-logo.png", logo: true },
     messages: [
-      { kind: "text", text: "between 2024 and 2025 i ran content strategy and operations for Inédito, an interview podcast. the host asked the questions; i made sure everything else happened" },
+      { kind: "text", text: "between 2024 and 2025 i ran content and marketing strategy for Inédito, an interview podcast. the host asked the questions; i made sure everything else happened and that people saw it" },
       { kind: "text", text: "we decided together which guests to go after and in what order. i booked them, managed the relationship and ran the daily hand-off between editing and social so every episode and every clip went out on time" },
       {
         kind: "link",
@@ -110,7 +110,7 @@ export const chapters = [
           image: "https://img.youtube.com/vi/mUqx8NFBc54/hqdefault.jpg",
         },
       },
-      { kind: "text", text: "70 episodes and 45,000 subscribers later, what stayed with me is how to organise a content team so it ships every single day" },
+      { kind: "text", text: "70 episodes and 45,000 subscribers later, what stayed with me is how to grow an audience: which clips travel, when to post them and how to organise a team so it ships every single day" },
     ],
   },
   {
@@ -157,7 +157,7 @@ export const chapters = [
     chip: "Let's talk",
     row: { title: "Contact", preview: "email and LinkedIn" },
     messages: [
-      { kind: "text", text: "if you'd like to talk about the role, about sales or about anything on this page, write to me. i reply fast" },
+      { kind: "text", text: "if you'd like to talk about the role, about sales and marketing or about anything on this page, write to me. i reply fast" },
       { kind: "contact" },
       { kind: "text", text: "thanks for making it this far 🙌" },
     ],
