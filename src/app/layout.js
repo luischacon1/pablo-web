@@ -5,6 +5,7 @@ export const metadata = {
   title: "Pablo Fernández Chacón · Sales & Marketing",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  verification: { google: "UKJH8EIlhdr7vjmimY89tewVUGUQFBfuk7Q2D8ufWWI" },
   description:
     "Pablo Fernández Chacón, Sales Team Lead at ICON Music Business School and marketing student in Seville, now in Rotterdam. A chat-style page built for my Google application: ask me anything.",
   openGraph: {
