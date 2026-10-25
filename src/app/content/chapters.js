@@ -72,9 +72,14 @@ export const chapters = [
   {
     id: "ventas",
     chip: "Why sales and marketing?",
-    row: { title: "Sales & marketing", preview: "the two sides of the same job", image: "/media/acom-headset.webp" },
+    row: { title: "Sales & marketing", preview: "quail chicks, a livestock fair and fifty euros at nine", image: "/media/acom-headset.webp" },
     messages: [
-      { kind: "text", text: "i like building things and meeting people. marketing is the first, sales is the second, and i've never been able to do one without the other" },
+      { kind: "text", text: "honest answer: sales found me before i found it. i was nine" },
+      { kind: "text", text: "i grew up in Zafra, a small town in the south of Spain with the biggest livestock fair in Europe. one afternoon i asked my mum for a couple of euros for sweets. on the way i decided the animals were more interesting" },
+      { kind: "text", text: "i bought a quail chick for one euro. walked outside the hall, sold it for two. went back in, bought two, sold them for four. then a hen chick and a quail, six. then three hen chicks. then a hen" },
+      { kind: "text", text: "i kept doubling it until my mum came to get me, because people were telling her i was selling animals from our farm. we don't have a farm" },
+      { kind: "text", text: "i finished the afternoon with two partridges and fifty euros. at nine. that story is probably the most honest thing on this page" },
+      { kind: "text", text: "the marketing part came later, but it's the same instinct: knowing who's outside the hall and what they want before you walk out" },
       { kind: "text", text: "i started at Spine Consulting, a marketing agency for small businesses. i ran both ends of the funnel: Google Ads campaigns to bring in leads, and 90 cold calls a day to turn them into clients. we signed 32 new clinics" },
       { kind: "text", text: "summer 2024 i was at ACOM selling electricity contracts over the phone. the hardest job i've had and the one that taught me the most" },
       { kind: "photos", photos: [P("acom-headset", 787, 1400, "Pablo wearing a headset at the ACOM call centre"), P("acom-oficina", 787, 1400, "Pablo at the ACOM office on its 10th anniversary")] },

@@ -7,7 +7,7 @@ const TODAY = () =>
 export const CHAPTER_HINTS = {
   google: "why Google: the Dublin event and why he's applying to the sales and marketing internship",
   icon: "ICON: from first sales hire to Sales Team Lead and partner",
-  ventas: "why sales and marketing; Spine Consulting (Google Ads + cold calling) and ACOM",
+  ventas: "why sales and marketing: the quail-chick story at the Zafra fair at nine; Spine Consulting (Google Ads + cold calling) and ACOM",
   inedito: "Inédito Podcast: content strategy and operations",
   estudios: "University of Seville, exchange in Madrid, Erasmus in Rotterdam",
   rotaract: "Rotaract Club Guadalupe Hispanidad and volunteering",
@@ -50,7 +50,8 @@ Most visitors are Google recruiters or hiring managers looking at Pablo's applic
 - Studies: Bachelor's in Marketing and Market Research, University of Seville (2023-2027). Entrance exam 12/14. Three honours (10/10), International Economics among them. Exchange year at Universidad Rey Juan Carlos, Madrid (2025-2026). Erasmus+ at Rotterdam University of Applied Sciences, Business and Society (Aug-Dec 2026).
 - Rotaract Club Guadalupe Hispanidad: founding member (2026) and president-elect for 2027-28. Events, membership growth, the club's social channels. Duchenne muscular dystrophy project, named best Rotary project in Extremadura. Volunteer camp monitor with PDAV.
 - Tools: HubSpot (advanced), Google Workspace, Stripe and SeQura, Excel. Certifications: HubSpot Inbound Sales and HubSpot Sales Software; Google Ads Search, Video and AI-Powered Performance Ads.
-- Personal: girlfriend Alba (from Seville). Grandmother just turned 86. Greta is the family's westie since they were kids. Has a brother. Hobbies: a drink with friends, the gym, mountain biking through the countryside, cooking. Likes building things and meeting new people; "sales found me before I found it".
+- The origin story (use it when asked why sales, why marketing, or what defines him; tell it as a story, in his words, not as a bullet list): he grew up in Zafra, a small town in the south of Spain that hosts the biggest livestock fair in Europe. At nine, he asked his mum for a couple of euros for sweets, decided the animals were more interesting, bought a quail chick for one euro, walked outside the hall and sold it for two. Went back in, bought two, sold them for four; then a hen chick and a quail for six; then three hen chicks; then a hen; kept doubling the money until his mum came to get him because people were telling her he was selling animals from the family farm, which doesn't exist. He ended the afternoon with two partridges and fifty euros. "Sales found me before I found it." Marketing came later but is the same instinct: knowing who is outside the hall and what they want before you walk out.
+- Personal: girlfriend Alba (from Seville). Grew up in Zafra (Badajoz). Grandmother just turned 86. Greta is the family's westie since they were kids. Has a brother. Hobbies: a drink with friends, the gym, mountain biking through the countryside, cooking. Likes building things and meeting new people; "sales found me before I found it".
 - Contact: fernandezchaconpablo@gmail.com · LinkedIn: linkedin.com/in/pablofernandezchacon · Site: pablofernandezchacon.com
 - If asked for the CV: there is a "View CV" button on the site (bottom left on desktop, or in the contact card). It downloads a PDF.
 
