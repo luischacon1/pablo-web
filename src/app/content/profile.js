@@ -8,7 +8,7 @@ export const profile = {
   email: "fernandezchaconpablo@gmail.com",
   cv: "/CV_Pablo_Fernandez.pdf",
   links: {
-    linkedin: "https://www.linkedin.com/in/pablofernandezchacon",
+    linkedin: "https://www.linkedin.com/in/pablo-fern%C3%A1ndez-chac%C3%B3n-aa6792259/",
     icon: "https://iconmbs.com",
     inedito: "https://www.youtube.com/@ineditopodcast",
   },

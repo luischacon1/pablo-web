@@ -100,7 +100,7 @@ function ContactCard() {
         </a>
         <a href={links.linkedin} target="_blank" rel="noopener noreferrer">
           <span>LinkedIn</span>
-          <span>pablofernandezchacon</span>
+          <span>Pablo Fernández Chacón</span>
         </a>
         <a href={links.icon} target="_blank" rel="noopener noreferrer">
           <span>ICON</span>
