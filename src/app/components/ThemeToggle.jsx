@@ -38,8 +38,8 @@ export default function ThemeToggle() {
       type="button"
       className="theme-toggle"
       onClick={toggle}
-      aria-label={isLight ? "Cambiar a modo noche" : "Cambiar a modo día"}
-      title={isLight ? "Modo noche" : "Modo día"}
+      aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+      title={isLight ? "Dark mode" : "Light mode"}
     >
       {isLight ? (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

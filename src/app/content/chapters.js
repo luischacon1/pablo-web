@@ -1,55 +1,65 @@
-// Guion de la conversación. Cada capítulo se dispara cuando el visitante
-// toca una sugerencia (o escribe algo muy parecido). Los mensajes de Pablo
-// se van "escribiendo" uno a uno con el indicador de escritura entre medias.
+// Script of the conversation. Each chapter plays when the visitor taps a
+// suggestion (or types something very close to it). Pablo's messages are
+// "typed" one by one with the typing indicator in between.
 //
-// Tono: humilde y tranquilo, de pasada. Las cosas se cuentan porque vienen
-// a cuento, no para presumir, y sin quitarse mérito.
+// Tone: calm and humble, in passing. Things come up because they are
+// relevant, never to show off, and without underselling either.
 //
-// FOTOS: las referencias P("nombre", w, h, alt) apuntan a /public/media.
-// Las que aún no existen están marcadas con TODO; hasta que lleguen, el
-// capítulo se muestra sin esa foto (ver filtro al final del archivo).
+// PHOTOS: P("name", w, h, alt) points at /public/media. Photos not yet
+// available are filtered out at the bottom of this file.
 //
-// Tipos de mensaje: text | photos | video | link | contact
+// Message kinds: text | photos | video | link | contact
 
 const P = (name, w, h, alt) => ({ src: `/media/${name}.webp`, w, h, alt });
 
 export const intro = [
-  { kind: "text", text: "hola 👋" },
-  { kind: "text", text: "soy pablo" },
-  { kind: "photos", photos: [P("pablo-retrato", 1050, 1400, "Pablo, retrato")] },
+  { kind: "text", text: "hi 👋" },
+  { kind: "text", text: "i'm pablo" },
+  { kind: "photos", photos: [P("pablo-retrato", 1050, 1400, "Pablo, portrait")] },
   {
     kind: "text",
-    text: "gracias por entrar. esto es un chat conmigo: pregúntame lo que quieras o toca alguna de las sugerencias de abajo",
+    text: "i built this page for one reason: i'm applying to Google, and a CV only tells you so much. this is the rest",
   },
   {
     kind: "text",
-    text: "ahora mismo llevo el equipo de ventas de ICON, una escuela para la industria de la música, y estoy de Erasmus en Rotterdam terminando la carrera. lo demás te lo cuento si te apetece",
+    text: "it works like a chat. tap a suggestion below or ask me anything, and i'll tell you why i think i'd be a good fit for the internship",
   },
   {
     kind: "text",
-    text: "(te contesta una IA con mi contexto. acierta bastante)",
+    text: "(an AI with my context does the answering. it's pretty accurate)",
   },
 ];
 
 export const chapters = [
   {
-    id: "icon",
-    chip: "¿Qué haces en ICON?",
-    row: { title: "ICON", preview: "de primer comercial a llevar el equipo" },
+    id: "google",
+    chip: "Why Google?",
+    row: { title: "Why Google", preview: "a day in Dublin that changed my plans", image: "/media/google-dublin.webp" },
     messages: [
-      { kind: "text", text: "ICON es una escuela para la gente que quiere trabajar en la industria de la música. las clases las dan los que están dentro: ejecutivos de Universal, Sony y Warner, ganadores de Latin Grammy, managers" },
-      { kind: "text", text: "entré en noviembre de 2025 como el primer comercial de la empresa. literalmente: yo y un teléfono" },
-      { kind: "photos", photos: [P("icon-equipo", 1400, 1050, "Pablo con el equipo de ICON")] }, // TODO foto
-      { kind: "text", text: "los primeros meses fueron llamar, cualificar, hacer las primeras matrículas y apuntar lo que funcionaba. eso acabó siendo el playbook de ventas" },
-      { kind: "text", text: "a los tres meses me pasaron a jornada completa para montar el equipo. hoy somos cinco entre setters y closers, con el proceso en HubSpot y una regla: nadie espera más de cinco minutos a que le llamemos" },
-      { kind: "text", text: "en la ampliación de capital de 2026 entré como socio. invertí parte de lo que había ganado y me dieron participaciones por el trabajo hecho. no es algo que esperase con 21 años" },
+      { kind: "text", text: "earlier this year i was invited to an event at Google's offices in Dublin, through my work at ICON" },
+      { kind: "photos", photos: [P("google-dublin", 1271, 1400, "Pablo outside Google Docks in Dublin")] },
+      { kind: "text", text: "i'd read about the place a hundred times. being inside was different: the way people talked about their work, the pace, how much they cared about the customer on the other end of the call" },
+      { kind: "text", text: "i walked out knowing that this was where i wanted to learn sales properly. so here i am, applying" },
+      { kind: "text", text: "what i bring: a year building a sales team from zero, a process-first way of working, and a lot of energy for picking up the phone. what i want: to learn how it's done at the scale Google does it" },
+    ],
+  },
+  {
+    id: "icon",
+    chip: "What do you do at ICON?",
+    row: { title: "ICON", preview: "from first sales hire to leading the team" },
+    messages: [
+      { kind: "text", text: "ICON is a music business school where the classes are taught by people inside the industry: executives from Universal, Sony and Warner, Latin Grammy winners, managers" },
+      { kind: "text", text: "i joined in november 2025 as the company's first sales hire. literally me and a phone" },
+      { kind: "text", text: "the first months were calling, qualifying, closing the first enrolments and writing down what worked. that became the sales playbook" },
+      { kind: "text", text: "three months in they moved me to full-time to build the team. today we're five, setters and closers, with the whole process in HubSpot and one rule: nobody waits more than five minutes for a call back" },
+      { kind: "text", text: "in the 2026 capital increase i became a partner. i put in part of what i'd earned and got shares for the work done. not something i expected at 21" },
       {
         kind: "link",
         link: {
           url: "https://iconmbs.com",
           domain: "iconmbs.com",
           title: "ICON Music Business School",
-          description: "Fórmate con los profesionales que están dentro de la industria.",
+          description: "Learn from the professionals who are inside the industry.",
           image: "/media/icon-logo.png",
           imageFit: "contain",
         },
@@ -58,31 +68,31 @@ export const chapters = [
   },
   {
     id: "ventas",
-    chip: "¿Por qué ventas?",
-    row: { title: "Vender", preview: "las ventas me encontraron a mí", image: "/media/acom-headset.webp" },
+    chip: "Why sales?",
+    row: { title: "Sales", preview: "sales found me first", image: "/media/acom-headset.webp" },
     messages: [
-      { kind: "text", text: "me gusta hacer cosas y conocer gente. las ventas son básicamente eso, así que creo que me encontraron ellas a mí" },
-      { kind: "text", text: "empecé en Spine Consulting, una agencia de marketing para pymes. 90 llamadas en frío al día y campañas de Google Ads para traer leads. conseguimos 32 clínicas nuevas" },
-      { kind: "text", text: "el verano de 2024 estuve en ACOM vendiendo contratos de luz por teléfono. el trabajo más duro que he hecho y el que más me enseñó" },
-      { kind: "photos", photos: [P("acom-headset", 787, 1400, "Pablo con auriculares en el call center de ACOM"), P("acom-oficina", 787, 1400, "Pablo en la oficina de ACOM, en su décimo aniversario")] },
+      { kind: "text", text: "i like building things and meeting people. sales is basically both, so i think it found me before i found it" },
+      { kind: "text", text: "i started at Spine Consulting, a marketing agency for small businesses. 90 cold calls a day plus Google Ads campaigns to bring in leads. we signed 32 new clinics" },
+      { kind: "text", text: "summer 2024 i was at ACOM selling electricity contracts over the phone. the hardest job i've had and the one that taught me the most" },
+      { kind: "photos", photos: [P("acom-headset", 787, 1400, "Pablo wearing a headset at the ACOM call centre"), P("acom-oficina", 787, 1400, "Pablo at the ACOM office on its 10th anniversary")] },
       { kind: "video", video: { src: "/media/acom-video.mp4", poster: "/media/acom-video-poster.jpg", w: 1024, h: 576 } },
-      { kind: "text", text: "esa cara es la de la llamada número doscientas del día. en agosto me dieron el premio al mejor vendedor del mes, así que algo haría bien" },
-      { kind: "text", text: "lo que he aprendido: un buen proceso gana a un buen pitch. y que la gente te compra cuando entiende que la has escuchado" },
+      { kind: "text", text: "that face is call number two hundred of the day. in august they named me top seller of the month, so i must have been doing something right" },
+      { kind: "text", text: "what i've learned: a good process beats a good pitch. and people buy when they feel you actually listened" },
     ],
   },
   {
     id: "inedito",
-    chip: "El podcast",
-    row: { title: "Inédito Podcast", preview: "70 episodios con mi hermano", image: "/media/inedito-logo.png", logo: true },
+    chip: "The podcast",
+    row: { title: "Inédito Podcast", preview: "70 episodes, 45,000 subscribers", image: "/media/inedito-logo.png", logo: true },
     messages: [
-      { kind: "text", text: "entre 2024 y 2025 ayudé a mi hermano Luis con Inédito, un podcast de entrevistas. él preguntaba, yo me encargaba de que todo lo demás pasara" },
-      { kind: "text", text: "decidíamos juntos a qué invitados ir a buscar y en qué orden, yo cerraba las agendas y coordinaba edición y redes para que cada semana saliera el episodio y sus clips sin fallar uno" },
+      { kind: "text", text: "between 2024 and 2025 i ran content strategy and operations for Inédito, an interview podcast. the host asked the questions; i made sure everything else happened" },
+      { kind: "text", text: "we decided together which guests to go after and in what order. i booked them, managed the relationship and ran the daily hand-off between editing and social so every episode and every clip went out on time" },
       {
         kind: "link",
         link: {
           url: "https://youtu.be/YNAptmPaGHk",
           domain: "youtube.com",
-          title: "Julissa Reynoso, embajadora de EE. UU. en España",
+          title: "Julissa Reynoso, U.S. Ambassador to Spain",
           description: "Inédito Podcast",
           image: "https://img.youtube.com/vi/YNAptmPaGHk/hqdefault.jpg",
         },
@@ -92,81 +102,69 @@ export const chapters = [
         link: {
           url: "https://www.youtube.com/watch?v=mUqx8NFBc54&t=31s",
           domain: "youtube.com",
-          title: "Federico Linares, presidente de EY España",
+          title: "Federico Linares, President of EY Spain",
           description: "Inédito Podcast",
           image: "https://img.youtube.com/vi/mUqx8NFBc54/hqdefault.jpg",
         },
       },
-      { kind: "text", text: "70 episodios y 45.000 suscriptores después, lo que me quedé fue cómo se organiza un equipo de contenido para que publique todos los días" },
+      { kind: "text", text: "70 episodes and 45,000 subscribers later, what stayed with me is how to organise a content team so it ships every single day" },
     ],
   },
   {
     id: "estudios",
-    chip: "¿Qué estudias?",
-    row: { title: "Universidad", preview: "Sevilla, Madrid y ahora Rotterdam", image: "/media/rotterdam-puente.webp" },
+    chip: "What do you study?",
+    row: { title: "University", preview: "Seville, Madrid and now Rotterdam", image: "/media/rotterdam-puente.webp" },
     messages: [
-      { kind: "text", text: "Marketing e Investigación de Mercados en la Universidad de Sevilla. tres matrículas de honor por el camino, entre ellas Economía Internacional" },
-      { kind: "text", text: "el año pasado hice un SICUE en la Rey Juan Carlos, en Madrid, y este semestre estoy de Erasmus en Rotterdam" },
-      { kind: "photos", photos: [P("rotterdam-puente", 787, 1400, "El puente Erasmus de Rotterdam de noche"), P("rotterdam-rdam", 787, 1400, "Rotterdam de noche")] },
-      { kind: "text", text: "trabajar en ICON desde Holanda es posible porque el equipo funciona solo. que era la idea" },
-      { kind: "photos", photos: [P("bruselas", 1400, 788, "Pablo frente al Palacio Real de Bruselas")] },
-      { kind: "text", text: "y de paso, los fines de semana, lo que pille a un tren de distancia" },
+      { kind: "text", text: "Marketing and Market Research at the University of Seville. three honours along the way, International Economics among them" },
+      { kind: "text", text: "last year i did an exchange at Rey Juan Carlos in Madrid, and this semester i'm on Erasmus in Rotterdam" },
+      { kind: "photos", photos: [P("rotterdam-puente", 787, 1400, "The Erasmus Bridge in Rotterdam at night"), P("rotterdam-rdam", 787, 1400, "Rotterdam at night")] },
+      { kind: "text", text: "running the ICON sales team from the Netherlands works because the team runs itself. which was the idea" },
+      { kind: "photos", photos: [P("bruselas", 1400, 788, "Pablo in front of the Royal Palace of Brussels")] },
+      { kind: "text", text: "and on weekends, whatever is a train ride away" },
     ],
   },
   {
     id: "rotaract",
-    chip: "¿Y fuera del trabajo?",
-    row: { title: "Rotaract", preview: "un club que montamos en 2026", image: "/media/rotaract-acto.webp" },
+    chip: "Outside work?",
+    row: { title: "Rotaract", preview: "a club we founded in 2026", image: "/media/rotaract-acto.webp" },
     messages: [
-      { kind: "text", text: "en 2026 fundamos con unos amigos el Rotaract Club Guadalupe Hispanidad, el club joven de Rotary. en 2027 me toca ser presidente" },
-      { kind: "photos", photos: [P("rotaract-acto", 1400, 1050, "Acto de constitución del Rotaract Club Guadalupe Hispanidad")] },
-      { kind: "text", text: "lo que más orgullo me da es el proyecto sobre la distrofia muscular de Duchenne: lo eligieron mejor proyecto de los clubes Rotary de Extremadura" },
-      { kind: "text", text: "también he sido monitor de campamentos con PDAV, cuidando de los pequeños y de que la logística no se cayera" },
+      { kind: "text", text: "in 2026 a few friends and i founded the Rotaract Club Guadalupe Hispanidad, Rotary's club for young people. i'm president-elect for 2027" },
+      { kind: "photos", photos: [P("rotaract-acto", 1400, 1050, "Charter ceremony of the Rotaract Club Guadalupe Hispanidad")] },
+      { kind: "text", text: "what i'm proudest of is our Duchenne muscular dystrophy project: it was named the best project among Rotary clubs in Extremadura" },
+      { kind: "text", text: "i've also been a camp monitor with PDAV, looking after the kids and making sure the logistics held up" },
     ],
   },
   {
     id: "personal",
-    chip: "Cuéntame algo personal",
-    row: { title: "Fuera del trabajo", preview: "amigos, campo y cocina", image: "/media/abuela.webp" },
+    chip: "Tell me something personal",
+    row: { title: "Outside work", preview: "friends, countryside and cooking", image: "/media/abuela.webp" },
     messages: [
-      { kind: "text", text: "lo que más me gusta: tomar algo con amigos, el gimnasio, la bici de monte por el campo y cocinar. en ese orden, más o menos" },
-      { kind: "text", text: "pero si quieres conocerme tienes que conocer a mi gente" },
-      { kind: "photos", photos: [P("abuela", 1050, 1400, "Pablo con su abuela en su 86 cumpleaños"), P("navidad-familia", 1400, 788, "Navidad en casa: Luis, Alba, mi madre y yo")] },
-      { kind: "text", text: "mi abuela, que acaba de cumplir 86, y la navidad en casa con mi madre, mi hermano y alba. las gafas son obligatorias" },
-      { kind: "photos", photos: [P("pareja-sevilla", 1400, 1050, "Pablo y Alba en Sevilla")] },
-      { kind: "text", text: "alba. sevilla, abril, y la cámara de alguien que no sabía quitar la fecha" },
-      { kind: "photos", photos: [P("hermanos-greta", 1038, 1400, "Pablo y Luis de pequeños con Greta")] },
-      { kind: "text", text: "y mi hermano Luis, con el que comparto empresa y casi todo lo demás desde que éramos estos dos. si quieres conocerlo a él, tiene su propio chat" },
-      {
-        kind: "link",
-        link: {
-          url: "https://www.luisfernandezchacon.com",
-          domain: "luisfernandezchacon.com",
-          title: "Luis Fernández Chacón",
-          description: "Esta web es un chat conmigo. Pregúntame lo que quieras y te cuento.",
-        },
-      },
+      { kind: "text", text: "what i enjoy most: a drink with friends, the gym, mountain biking through the countryside and cooking. roughly in that order" },
+      { kind: "text", text: "but if you want to know me you have to know my people" },
+      { kind: "photos", photos: [P("abuela", 1050, 1400, "Pablo with his grandmother on her 86th birthday"), P("navidad-familia", 1400, 788, "Christmas at home")] },
+      { kind: "text", text: "my grandmother, who just turned 86, and christmas at home with my mum, my brother and alba. the glasses are mandatory" },
+      { kind: "photos", photos: [P("pareja-sevilla", 1400, 1050, "Pablo and Alba in Seville")] },
+      { kind: "text", text: "alba. seville, april, and a camera whose owner never found the setting to remove the date" },
+      { kind: "photos", photos: [P("hermanos-greta", 1038, 1400, "Pablo and his brother as kids with Greta")] },
+      { kind: "text", text: "and my brother and me, back when greta fit in two hands" },
     ],
   },
   {
     id: "contacto",
-    chip: "¿Hablamos?",
-    row: { title: "Contacto", preview: "email, LinkedIn e Instagram" },
+    chip: "Let's talk",
+    row: { title: "Contact", preview: "email, LinkedIn and Instagram" },
     messages: [
-      { kind: "text", text: "si quieres hablar de ventas, de ICON o de cualquier idea, escríbeme. contesto rápido" },
+      { kind: "text", text: "if you'd like to talk about the role, about sales or about anything on this page, write to me. i reply fast" },
       { kind: "contact" },
-      { kind: "text", text: "gracias por llegar hasta aquí 🙌" },
+      { kind: "text", text: "thanks for making it this far 🙌" },
     ],
   },
 ];
 
-// Mientras no existan las fotos marcadas TODO, se ocultan los mensajes
-// de fotos cuyos archivos no están en public/media (lista mantenida abajo).
+// Photo messages whose files are not in public/media yet are hidden.
 const available = new Set([
-  "pablo-retrato", "acom-headset", "acom-oficina", "rotterdam-puente", "rotterdam-rdam", "bruselas",
-  "rotaract-acto", "abuela", "navidad-familia", "hermanos-greta",
-  "pareja-sevilla",
-  // pendiente: "icon-equipo"
+  "pablo-retrato", "google-dublin", "acom-headset", "acom-oficina", "rotterdam-puente", "rotterdam-rdam",
+  "bruselas", "rotaract-acto", "abuela", "navidad-familia", "pareja-sevilla", "hermanos-greta",
 ]);
 for (const list of [intro, ...chapters.map((c) => c.messages)]) {
   for (let i = list.length - 1; i >= 0; i--) {

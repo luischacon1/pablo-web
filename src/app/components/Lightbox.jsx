@@ -24,7 +24,7 @@ export default function Lightbox({ photos, index, onClose }) {
   return (
     <div className="lightbox" role="dialog" aria-modal="true" aria-label={p.alt} onClick={onClose}>
       <img key={p.src} src={p.src} alt={p.alt} onClick={(e) => e.stopPropagation()} />
-      <button type="button" className="lightbox-close" onClick={onClose} aria-label="Cerrar">
+      <button type="button" className="lightbox-close" onClick={onClose} aria-label="Close">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
           <path d="M6 6l12 12M18 6L6 18" />
         </svg>
@@ -34,7 +34,7 @@ export default function Lightbox({ photos, index, onClose }) {
           <button
             type="button"
             className="lightbox-nav prev"
-            aria-label="Anterior"
+            aria-label="Previous"
             onClick={(e) => {
               e.stopPropagation();
               setI((v) => (v - 1 + n) % n);
@@ -47,7 +47,7 @@ export default function Lightbox({ photos, index, onClose }) {
           <button
             type="button"
             className="lightbox-nav next"
-            aria-label="Siguiente"
+            aria-label="Next"
             onClick={(e) => {
               e.stopPropagation();
               setI((v) => (v + 1) % n);
@@ -58,7 +58,7 @@ export default function Lightbox({ photos, index, onClose }) {
             </svg>
           </button>
           <div className="lightbox-count">
-            {i + 1} de {n}
+            {i + 1} of {n}
           </div>
         </>
       )}

@@ -25,13 +25,13 @@ function typingDelay(m) {
 }
 
 function timeNow() {
-  return new Date().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
+  return new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
 }
 
 function dayStamp() {
   const d = new Date();
-  const weekday = d.toLocaleDateString("es-ES", { weekday: "long" });
-  const date = d.toLocaleDateString("es-ES", { day: "numeric", month: "short" });
+  const weekday = d.toLocaleDateString("en-GB", { weekday: "long" });
+  const date = d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
   return `${weekday[0].toUpperCase() + weekday.slice(1)} ${date}`;
 }
 
@@ -137,10 +137,10 @@ export default function Chat() {
         setBusy(false);
       };
 
-      if (!res) return fail("se me ha ido la conexión. prueba otra vez en un momento");
+      if (!res) return fail("looks like i lost connection. try again in a moment");
       if (res.status === 503)
-        return fail(`esta parte todavía no está conectada. escríbeme a ${profile.email} y te contesto yo de verdad`);
-      if (!res.ok || !res.body) return fail("algo ha fallado por mi lado. inténtalo de nuevo, o escríbeme al email");
+        return fail(`this part isn't connected yet. email me at ${profile.email} and i'll answer in person`);
+      if (!res.ok || !res.body) return fail("something failed on my end. try again, or send me an email");
 
       // Las burbujas se van creando según llega el texto: cada párrafo
       // (línea en blanco) es un mensaje nuevo, como si Pablo los enviara uno a uno.
@@ -187,7 +187,7 @@ export default function Chat() {
         /* se corta la conexión: lo que haya llegado se queda */
       }
 
-      if (first) return fail("me he quedado en blanco, como en mi primer hackathon. ¿me lo repites?");
+      if (first) return fail("i blanked for a second. could you say that again?");
 
       const tag = full.match(/\[\[chapter:([a-z]+)\]\]/i);
       const clean = full.replace(/\s*\[\[chapter:[^\]]*\]\]\s*/gi, "").trim();
@@ -278,7 +278,7 @@ export default function Chat() {
     <div className="app">
       <Sidebar seen={seen} current={current} onPick={pick} />
 
-      <section className="thread" aria-label={`Conversación con ${profile.name}`}>
+      <section className="thread" aria-label={`Conversation with ${profile.name}`}>
         <header className="navbar">
           <span className="navbar-avatar">
             <img src={profile.avatar.src} alt="" width="52" height="52" />
@@ -291,7 +291,7 @@ export default function Chat() {
           </span>
           <span className="navbar-side right">
             <ThemeToggle />
-            <a className="theme-toggle" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Luis" title="LinkedIn">
+            <a className="theme-toggle" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Pablo on LinkedIn" title="LinkedIn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 11v5M12 8v.5" />
@@ -309,13 +309,13 @@ export default function Chat() {
               const next = thread[i + 1];
               const tail = !next || next.from !== m.from;
               let meta = null;
-              if (m === lastMine) meta = answered ? `Leído ${m.at}` : "Entregado";
+              if (m === lastMine) meta = answered ? `Read ${m.at}` : "Delivered";
               return (
                 <Message key={m.id} msg={m} tail={tail} meta={meta} onOpenPhotos={(photos, index) => setLightbox({ photos, index })} />
               );
             })}
             {typing && (
-              <div className="msg in typing" aria-label="Pablo está escribiendo">
+              <div className="msg in typing" aria-label="Pablo is typing">
                 <div className="bubble">
                   <i />
                   <i />
@@ -327,7 +327,7 @@ export default function Chat() {
         </div>
 
         {!atBottom && (
-          <button type="button" className="to-bottom" onClick={jumpBottom} aria-label="Ir al último mensaje">
+          <button type="button" className="to-bottom" onClick={jumpBottom} aria-label="Jump to latest message">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 5v14M5 12l7 7 7-7" />
             </svg>

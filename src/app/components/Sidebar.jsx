@@ -22,9 +22,9 @@ export default function Sidebar({ seen, current, onPick }) {
   );
 
   return (
-    <aside className="sidebar" aria-label="Conversaciones">
+    <aside className="sidebar" aria-label="Conversations">
       <div className="sidebar-head">
-        <h1 className="sidebar-title">Mensajes</h1>
+        <h1 className="sidebar-title">Messages</h1>
         <label className="sidebar-search">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
             <circle cx="11" cy="11" r="7" />
@@ -32,10 +32,10 @@ export default function Sidebar({ seen, current, onPick }) {
           </svg>
           <input
             type="search"
-            placeholder="Buscar"
+            placeholder="Search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            aria-label="Buscar capítulo"
+            aria-label="Search chapters"
           />
         </label>
       </div>
@@ -48,7 +48,7 @@ export default function Sidebar({ seen, current, onPick }) {
           <span className="row-text">
             <span className="row-top">
               <span className="row-title">{profile.shortName}</span>
-              <span className="row-time">Ahora</span>
+              <span className="row-time">Now</span>
             </span>
             <span className="row-preview">
               {profile.role} · {profile.city}
@@ -73,7 +73,7 @@ export default function Sidebar({ seen, current, onPick }) {
               <span className="row-text">
                 <span className="row-top">
                   <span className="row-title">{c.row.title}</span>
-                  {!isSeen && <span className="row-unread" aria-label="Sin leer" />}
+                  {!isSeen && <span className="row-unread" aria-label="Unread" />}
                 </span>
                 <span className="row-preview">{c.row.preview}</span>
               </span>
@@ -87,7 +87,7 @@ export default function Sidebar({ seen, current, onPick }) {
         <a href={profile.links.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href={profile.links.icon} target="_blank" rel="noopener noreferrer">ICON</a>
         <a href={`mailto:${profile.email}`}>Email</a>
-        <a href={profile.cv} download="CV_Pablo_Fernandez.pdf">Ver CV</a>
+        <a href={profile.cv} download="CV_Pablo_Fernandez.pdf">View CV</a>
       </div>
     </aside>
   );

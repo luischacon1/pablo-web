@@ -3,12 +3,12 @@ import "./globals.css";
 export const metadata = {
   title: "Pablo Fernández Chacón",
   description:
-    "Esta web es un chat conmigo. Pregúntame lo que quieras y te cuento.",
+    "A chat with me, built for my Google application. Ask me anything.",
   openGraph: {
     title: "Pablo Fernández Chacón",
-    description: "Esta web es un chat conmigo. Pregúntame lo que quieras y te cuento.",
+    description: "A chat with me, built for my Google application. Ask me anything.",
     images: [{ url: "/media/pablo-avatar.webp", width: 1200, height: 1200 }],
-    locale: "es_ES",
+    locale: "en_GB",
     type: "profile",
   },
   twitter: {
@@ -33,7 +33,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

@@ -34,7 +34,7 @@ function Photos({ photos, onOpen }) {
           className="photo"
           style={n === 1 ? { "--ar": `${p.w} / ${p.h}` } : undefined}
           onClick={() => onOpen(photos, i)}
-          aria-label={`Ampliar foto: ${p.alt}`}
+          aria-label={`Enlarge photo: ${p.alt}`}
         >
           <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" />
         </button>
