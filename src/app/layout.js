@@ -13,7 +13,7 @@ export const metadata = {
     url: "/",
     siteName: "Pablo Fernández Chacón",
     description: "Pablo Fernández Chacón, Sales Team Lead at ICON Music Business School and marketing student in Seville, now in Rotterdam. A chat-style page built for my Google application: ask me anything.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/og.jpg", secureUrl: "https://www.pablofernandezchacon.com/og.jpg", width: 1200, height: 630, type: "image/jpeg", alt: "Pablo Fernández Chacón outside Google Docks, Dublin" }],
     locale: "en_GB",
     type: "profile",
   },
