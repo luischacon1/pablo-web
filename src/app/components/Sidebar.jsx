@@ -84,7 +84,6 @@ export default function Sidebar({ seen, current, onPick }) {
 
       <div className="sidebar-foot">
         <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href={profile.links.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href={profile.links.icon} target="_blank" rel="noopener noreferrer">ICON</a>
         <a href={`mailto:${profile.email}`}>Email</a>
         <a href={profile.cv} download="CV_Pablo_Fernandez.pdf">View CV</a>

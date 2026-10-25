@@ -9,7 +9,6 @@ export const profile = {
   cv: "/CV_Pablo_Fernandez.pdf",
   links: {
     linkedin: "https://www.linkedin.com/in/pablofernandezchacon",
-    instagram: "https://www.instagram.com/pablofdezchacon",
     icon: "https://iconmbs.com",
     inedito: "https://www.youtube.com/@ineditopodcast",
   },

@@ -155,7 +155,7 @@ export const chapters = [
   {
     id: "contacto",
     chip: "Let's talk",
-    row: { title: "Contact", preview: "email, LinkedIn and Instagram" },
+    row: { title: "Contact", preview: "email and LinkedIn" },
     messages: [
       { kind: "text", text: "if you'd like to talk about the role, about sales or about anything on this page, write to me. i reply fast" },
       { kind: "contact" },

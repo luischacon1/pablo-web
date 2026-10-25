@@ -102,10 +102,6 @@ function ContactCard() {
           <span>LinkedIn</span>
           <span>pablofernandezchacon</span>
         </a>
-        <a href={links.instagram} target="_blank" rel="noopener noreferrer">
-          <span>Instagram</span>
-          <span>@pablofdezchacon</span>
-        </a>
         <a href={links.icon} target="_blank" rel="noopener noreferrer">
           <span>ICON</span>
           <span>iconmbs.com</span>
