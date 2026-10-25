@@ -31,11 +31,12 @@ export async function POST(request) {
     return Response.json({ error: "bad_request" }, { status: 400 });
   }
 
-  if (!process.env.OPENAI_API_KEY) {
+  const apiKey = process.env.OPENAI_API_KEY || process.env.pablo_web_api;
+  if (!apiKey) {
     return Response.json({ error: "not_configured" }, { status: 503 });
   }
 
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const openai = new OpenAI({ apiKey });
 
   const params = {
     model: MODEL,

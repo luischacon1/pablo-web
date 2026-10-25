@@ -15,7 +15,11 @@ const P = (name, w, h, alt) => ({ src: `/media/${name}.webp`, w, h, alt });
 export const intro = [
   { kind: "text", text: "hi 👋" },
   { kind: "text", text: "i'm pablo" },
-  { kind: "photos", photos: [P("pablo-retrato", 1050, 1400, "Pablo, portrait")] },
+  { kind: "photos", photos: [P("google-dublin", 1271, 1400, "Pablo outside Google Docks in Dublin")] },
+  {
+    kind: "text",
+    text: "yes, that's Google Dublin. i was there for an event earlier this year and i haven't stopped thinking about it since",
+  },
   {
     kind: "text",
     text: "i built this page for one reason: i'm applying to Google, and a CV only tells you so much. this is the rest",
@@ -36,8 +40,7 @@ export const chapters = [
     chip: "Why Google?",
     row: { title: "Why Google", preview: "a day in Dublin that changed my plans", image: "/media/google-dublin.webp" },
     messages: [
-      { kind: "text", text: "earlier this year i was invited to an event at Google's offices in Dublin, through my work at ICON" },
-      { kind: "photos", photos: [P("google-dublin", 1271, 1400, "Pablo outside Google Docks in Dublin")] },
+      { kind: "text", text: "the photo at the top: earlier this year i was invited to an event at Google's offices in Dublin, through my work at ICON" },
       { kind: "text", text: "i'd read about the place a hundred times. being inside was different: the way people talked about their work, the pace, how much they cared about the customer on the other end of the call" },
       { kind: "text", text: "i walked out knowing that this was where i wanted to learn sales properly. so here i am, applying" },
       { kind: "text", text: "what i bring: a year building a sales team from zero, a process-first way of working, and a lot of energy for picking up the phone. what i want: to learn how it's done at the scale Google does it" },
