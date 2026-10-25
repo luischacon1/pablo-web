@@ -1,18 +1,20 @@
 import "./globals.css";
 
 export const metadata = {
+  metadataBase: new URL("https://www.pablofernandezchacon.com"),
   title: "Pablo Fernández Chacón",
   description:
     "A chat with me, built for my Google application. Ask me anything.",
   openGraph: {
     title: "Pablo Fernández Chacón",
     description: "A chat with me, built for my Google application. Ask me anything.",
-    images: [{ url: "/media/pablo-avatar.webp", width: 1200, height: 1200 }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630 }],
     locale: "en_GB",
     type: "profile",
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og.jpg"],
   },
   icons: {
     icon: "/pablo-favicon.png",
